@@ -1,1 +1,8 @@
 # Economic_Tail_Distribution_Analysis
+
+## Problem
+In this assignment, the focus is on the tail distribution of demand shocks in economic data, particularly the upper 1% quantile. The first task involves assessing the reproducibility of the upper 1% quantile in the demand shock. If reproducibility is an issue, measures need to be identified to address it. The script should then be modified to ensure reproducibility, aiming to produce consistent results for the upper 1% quantile under various shock percentages (30%, 70%, and 100%) applied to random sectors in random countries. This modification involves careful consideration of arguments accepted by the Leontieff_Model class's shock() method. 
+
+## Solution 
+
+The assessment of the upper 1% quantile in the demand shock, revealed variability between runs, indicating a lack of complete reproducibility. To enhance reproducibility, measures were proposed, such as setting a fixed random seed using `np.random.seed()` and increasing repetitions in the `shock` method. These steps were implemented in the modified script, resulting in a reproducible upper 1% quantile for demand shocks. The script was then further adjusted to produce this quantile for shock sizes of 0.3 (30%), 0.7 (70%), and 1.0 (100%). The reproducible quantile values were obtained, indicating the expected maximum impact of demand shocks of varying sizes on the world economy. The interpretation underscores the significance of these values in assessing potential risks associated with demand shocks and aiding policymakers in economic risk management. The script's minor modifications demonstrate the effectiveness of these measures in achieving reproducibility, offering a valuable tool for studying extreme scenarios in economic modeling.
